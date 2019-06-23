@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSJ-KO-BVx">
+                    <rect key="frame" x="15" y="187" width="384" height="44"/>
+                    <color key="backgroundColor" red="1" green="0.67429919149999995" blue="0.33865443629999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="og5-LW-V7B"/>
+                    </constraints>
+                    <state key="normal" title="模态弹出页面"/>
+                    <connections>
+                        <action selector="presentVcAction:" destination="-1" eventType="touchUpInside" id="S0T-64-0M6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RN-FK-fZg">
+                    <rect key="frame" x="15" y="256" width="384" height="44"/>
+                    <color key="backgroundColor" red="1" green="0.67429919149999995" blue="0.33865443629999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="L85-oV-NNz"/>
+                        <constraint firstAttribute="height" constant="44" id="qMq-ap-WWW"/>
+                    </constraints>
+                    <state key="normal" title="导航push页面"/>
+                    <connections>
+                        <action selector="pushVcAction:" destination="-1" eventType="touchUpInside" id="s3R-wC-esf"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="RSJ-KO-BVx" secondAttribute="trailing" constant="15" id="7g5-fo-WoC"/>
+                <constraint firstItem="8RN-FK-fZg" firstAttribute="top" secondItem="RSJ-KO-BVx" secondAttribute="bottom" constant="25" id="IQe-Pq-eGs"/>
+                <constraint firstItem="RSJ-KO-BVx" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="JfE-Gl-P2E"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="8RN-FK-fZg" secondAttribute="trailing" constant="15" id="UdW-QK-5hy"/>
+                <constraint firstItem="8RN-FK-fZg" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="il6-Ed-Dmr"/>
+                <constraint firstItem="RSJ-KO-BVx" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="143" id="myl-vI-wtp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="137.68115942028987" y="92.410714285714278"/>
+        </view>
+    </objects>
+</document>

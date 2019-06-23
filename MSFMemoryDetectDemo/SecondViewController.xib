@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDR-uF-haV">
+                    <rect key="frame" x="15" y="187" width="384" height="44"/>
+                    <color key="backgroundColor" red="0.93206453320000004" green="0.67274210079999996" blue="0.26611400429999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="5BS-zg-f3R"/>
+                    </constraints>
+                    <state key="normal" title="popViewController"/>
+                    <connections>
+                        <action selector="leaveVcAction:" destination="-1" eventType="touchUpInside" id="mjm-3E-cMw"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbR-Fy-N1s">
+                    <rect key="frame" x="15" y="256" width="384" height="44"/>
+                    <color key="backgroundColor" red="0.93206453320000004" green="0.67274210079999996" blue="0.26611400429999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Nyv-S4-D6Q"/>
+                    </constraints>
+                    <state key="normal" title="popToRootViewController"/>
+                    <connections>
+                        <action selector="leaveToRootVcAction:" destination="-1" eventType="touchUpInside" id="j7P-tf-MRJ"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="打开右侧开关，让当前VC内存泄漏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDV-o6-8ur">
+                    <rect key="frame" x="15" y="333" width="188" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yEC-as-gQb">
+                    <rect key="frame" x="350" y="325" width="51" height="31"/>
+                    <connections>
+                        <action selector="makeVCmemoryLeak:" destination="-1" eventType="valueChanged" id="PQB-ji-zKl"/>
+                    </connections>
+                </switch>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tGo-dS-TjP">
+                    <rect key="frame" x="350" y="380" width="51" height="31"/>
+                    <connections>
+                        <action selector="makeModelMemoryLeak:" destination="-1" eventType="valueChanged" id="VZp-RE-5AE"/>
+                    </connections>
+                </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="打开右侧开关，让model内存泄漏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yY4-5I-mox">
+                    <rect key="frame" x="15" y="377" width="182" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="YDR-uF-haV" secondAttribute="trailing" constant="15" id="Dhy-RG-MA3"/>
+                <constraint firstItem="FbR-Fy-N1s" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="MZ5-Kt-XXg"/>
+                <constraint firstItem="tGo-dS-TjP" firstAttribute="top" secondItem="FbR-Fy-N1s" secondAttribute="bottom" constant="80" id="PXl-GH-i7O"/>
+                <constraint firstItem="FbR-Fy-N1s" firstAttribute="top" secondItem="YDR-uF-haV" secondAttribute="bottom" constant="25" id="VZP-hc-hcd"/>
+                <constraint firstItem="YDR-uF-haV" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="a0D-HD-xdg"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="FbR-Fy-N1s" secondAttribute="trailing" constant="15" id="dai-rC-tLU"/>
+                <constraint firstItem="YDR-uF-haV" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="143" id="ddi-Of-7AU"/>
+                <constraint firstItem="yDV-o6-8ur" firstAttribute="top" secondItem="FbR-Fy-N1s" secondAttribute="bottom" constant="33" id="hUd-eU-om4"/>
+                <constraint firstItem="yY4-5I-mox" firstAttribute="top" secondItem="yDV-o6-8ur" secondAttribute="bottom" constant="29.5" id="hki-GU-xGc"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="tGo-dS-TjP" secondAttribute="trailing" constant="15" id="k0i-cY-9Gi"/>
+                <constraint firstItem="yY4-5I-mox" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="kUc-OM-w9I"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="yEC-as-gQb" secondAttribute="trailing" constant="15" id="pnr-BP-kXx"/>
+                <constraint firstItem="yDV-o6-8ur" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="qEQ-oN-gdg"/>
+                <constraint firstItem="yEC-as-gQb" firstAttribute="top" secondItem="FbR-Fy-N1s" secondAttribute="bottom" constant="25" id="vnF-3s-2T0"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="137.68115942028987" y="92.410714285714278"/>
+        </view>
+    </objects>
+</document>
